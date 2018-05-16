@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import FaqModel from './FaqModel'
-import FaqMessage from './FaqMessage'
+import React, { Component } from 'react';
+import FaqModel from './FaqModel';
+import FaqMessage from './FaqMessage';
 
 class Faq extends Component  {
 

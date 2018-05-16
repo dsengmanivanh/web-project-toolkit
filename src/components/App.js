@@ -14,5 +14,5 @@ class App extends Component {
   }
 }
 
-const wrapper = document.getElementById("create-article-form");
+const wrapper = document.getElementById("reactapp");
 wrapper ? ReactDOM.render(<App />, wrapper) : false;

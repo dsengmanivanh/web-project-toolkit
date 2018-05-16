@@ -8,7 +8,8 @@ module.exports = {
  entry: {
    index: './src/js/index.js',
    app:'./src/components/App.js',
-   faq: glob.sync("./src/components/faq/*.js")
+   faq: glob.sync("./src/components/faq/*.js"),
+   select: glob.sync("./src/components/select/*.js")
  },
  output: {
    filename: 'js/[name].[chunkhash].js',
@@ -27,8 +28,13 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: "./src/app.html",
-      filename: "./app.html",
+      filename: "./faq.html",
       chunks: ['app','faq']
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/app.html",
+      filename: "./select.html",
+      chunks: ['select']
     })
  ],
  module: {
