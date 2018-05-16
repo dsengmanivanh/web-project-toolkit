@@ -1,0 +1,24 @@
+.FaqMessage {
+  .question {
+    color: blue;
+    padding: 0;
+    user-select: none;
+    cursor:pointer;
+    margin-bottom: 20px;
+  }
+
+  .request{
+    display: inline-block;
+    max-width: 80%;
+  }
+
+  .answer {
+    p {
+      font-size: 1.2em;
+      margin-left: 10px;
+      &.bigger {
+        font-weight: bold;
+      }
+    }
+  }
+}
