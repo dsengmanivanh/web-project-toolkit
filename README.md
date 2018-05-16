@@ -45,3 +45,11 @@ https://atom.io/packages/linter-jshint
 https://www.sitepoint.com/10-essential-atom-add-ons/
 
 https://atom.io/packages/git-time-machine => alt t
+
+# React
+
+*Select*
+
+https://jedwatson.github.io/react-select/
+
+https://github.com/JedWatson/react-select
