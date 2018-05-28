@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Select from 'react-select';
-import SelectMessage from '../select/SelectMessage';
+import CardMessage from './CardMessage';
 import '../select/Select.scss';
 const ClassNameHelper = require("../../helper/ClassNameHelper");
-const StateModel = require("../select/StateModel");
+const CardModel = require("./CardModel");
 
 class AppSelectMulti extends Component {
 
@@ -32,13 +32,14 @@ class AppSelectMulti extends Component {
 
   render() {
   	const { disabled, value } = this.state;
-    const options = StateModel.US;
-    const cards = value.length == 0 ? StateModel.US : value;
-    
+    const options = CardModel.cards;
+    const cards = value.length == 0 ? CardModel.cards : value;
+
     return (
       <div>
           <div className={ClassNameHelper({"container": true})}>
-            <h1>React Select Multi</h1>
+            <h1 class="mx-auto">Le Classeur</h1>
+            <h4 class="mx-auto">Fiches et Projets</h4>
             <Select
               disabled={disabled}
               onChange={this.handleSelectChange}
@@ -49,14 +50,16 @@ class AppSelectMulti extends Component {
               rtl={this.state.rtl}
               value={value}
             />
+            <div class="row">
             {
               cards.map(data => {
                   return (
-                    <SelectMessage message={data.label}></SelectMessage>
+                    <CardMessage title={data.label} description={data.description} link={data.link}></CardMessage>
                   )
                 }
               )
             }
+            </div>
           </div>
       </div>
     );

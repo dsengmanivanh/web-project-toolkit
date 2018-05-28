@@ -1,0 +1,7 @@
+exports.cards = [
+    { value: 'Air-Hockey', label: 'Air Hockey', description:'Scratch - Niveau Intermédiare - 45 minutes', link:'http://voyageursducode.fr/ressources/fiches-activites/air-hockey.html' },
+    { value: 'Bandit-Manchot', label: 'Bandit Manchot' , description:'Créez l’incontournable jeu du Bandit manchot dont le but est de stopper l’animation au moment où les trois éléments à l’écran sont identiques.', link:'http://voyageursducode.fr/ressources/fiches-activites/bandit-manchot.html'},
+    { value: 'Casse-Brique', label: 'Casse Brique' , description:'Le but du jeu est très simple : il faut casser des briques ! Pour cela, il faut diriger une raquette et faire rebondir la balle dessus pour que celle-ci casse les briques présentes dans votre jeu.', link:'http://voyageursducode.fr/ressources/fiches-activites/casse-brique.html'},
+    { value: 'Chasseur-de-zombies', label: 'Chasseur de zombies' , description:'Créer un jeu de tir où vous incarnez une héroïne qui combat les zombies. ', link:'http://voyageursducode.fr/ressources/fiches-activites/scratch-chasseur-de-zombies.html'},
+    { value: 'Ghostbuster', label: 'Ghostbuster' , description:'Avec cette activité, vous allez créer le célèbre jeu Ghostbuster où vous interprétez un chasseur de fantôme. Vous devez faire disparaître un maximum de fantômes en seulement 30 secondes et ainsi récolter un maximum de points.', link:'http://voyageursducode.fr/ressources/fiches-activites/ghostbuster2.html'}
+];
