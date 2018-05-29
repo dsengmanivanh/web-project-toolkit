@@ -13,7 +13,7 @@ module.exports = {
    selectmulti: glob.sync("./src/components/selectmulti/*.js")
  },
  output: {
-   filename: 'js/[name].[chunkhash].js',
+   filename: 'js/[name].bundle.js',
    path: path.resolve(__dirname, 'dist')
  },
  plugins: [

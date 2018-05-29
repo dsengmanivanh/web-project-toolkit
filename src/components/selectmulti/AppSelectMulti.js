@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Select from 'react-select';
 import CardMessage from './CardMessage';
-import '../select/Select.scss';
+import './scss/home.scss';
 const ClassNameHelper = require("../../helper/ClassNameHelper");
 const CardModel = require("./CardModel");
 
@@ -29,7 +29,6 @@ class AppSelectMulti extends Component {
 		this.setState({ rtl });
 	}
 
-
   render() {
   	const { disabled, value } = this.state;
     const options = CardModel.cards;
@@ -37,30 +36,55 @@ class AppSelectMulti extends Component {
 
     return (
       <div>
-          <div className={ClassNameHelper({"container": true})}>
-            <h1 class="mx-auto">Le Classeur</h1>
-            <h4 class="mx-auto">Fiches et Projets</h4>
-            <Select
-              disabled={disabled}
-              onChange={this.handleSelectChange}
-              multi
-              options={options}
-              placeholder="Select your favourite(s)"
-              removeSelected={this.state.removeSelected}
-              rtl={this.state.rtl}
-              value={value}
-            />
-            <div class="row">
-            {
-              cards.map(data => {
-                  return (
-                    <CardMessage title={data.label} description={data.description} link={data.link}></CardMessage>
-                  )
-                }
-              )
-            }
+        <section id="classeur" className="content-section text-white folder-section content--ravi">
+            <div className="container text-center">
+              <div className="grid">
+              <div className="grid__item">
+                <div className="dummy"><svg><use xlinkHref="#icon-folderdummy"></use></svg></div></div>
+                <div className="grid__item">
+                  <div className="folder folder--ravi">
+                    <div className="folder__icon folder__icon--perspective">
+                      <div className="folder__feedback"></div>
+                      <div className="folder__icon-img folder__icon-img--back">
+                        <svg className="folder__icon-svg"><use xlinkHref="#icon-folderback"></use></svg>
+                      </div>
+                      <div className="folder__icon-deco"></div>
+                      <div className="folder__icon-img folder__icon-img--cover">
+                        <svg className="folder__icon-svg"><use xlinkHref="#icon-foldercover"></use></svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="grid__item"><div className="dummy"><svg><use xlinkHref="#icon-folderdummy"></use></svg></div></div>
+              </div>
+              <div className="content-section-heading">
+              <h2 className="mb-5 text-dark">Le classeur</h2>
+                <Select
+                  disabled={disabled}
+                  onChange={this.handleSelectChange}
+                  multi
+                  options={options}
+                  placeholder="Select your favourite(s)"
+                  removeSelected={this.state.removeSelected}
+                  rtl={this.state.rtl}
+                  value={value}
+                />
+              </div>
             </div>
+
+        </section>
+        <div className={ClassNameHelper({"container": true})}>
+          <div className="row">
+          {
+            cards.map(data => {
+                return (
+                  <CardMessage title={data.label} description={data.description} link={data.link} key={data.value}></CardMessage>
+                )
+              }
+            )
+          }
           </div>
+        </div>
       </div>
     );
   }

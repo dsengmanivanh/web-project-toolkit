@@ -1,0 +1,29 @@
+// Variables
+
+// Restated Bootstrap Variables
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$primary: #1D809F !default;
+$secondary: #ecb807 !default;
+
+
+$folder-width: 6em;
+$folder-height: calc(0.8 * #{$folder-width});
+$folder-deco-width: calc(#{$folder-width} / 3.5);
+$folder-cover-height: calc(0.7 * #{$folder-width});
+$folder-slip-height: calc(#{$folder-height} - #{$folder-cover-height});
+$folder-border-radius: calc(#{$folder-width} / 10);
+$folder-title-size: calc(0.16 * #{$folder-width});
+$thumb-width: calc(0.6 * #{$folder-width});
+$grid-item-padding: 3em;
