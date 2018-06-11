@@ -1,55 +1,64 @@
 # Front End Starter pack
 
-A Sample Webpack Project with multiple html, sass and react
+A barebones React app using webpack, sass and hot reloading.
 
-npm start => dev with hot loading
+## Demo
 
-npm run build => prod with hash and sourceMap
+https://fierce-temple-30386.herokuapp.com/index.html
 
-statistics.html => visualizer
+## Installation
+
+```
+$ npm install
+```
+
+## Running Locally
+
+```
+$ npm start
+```
+
+It is for dev environment and you can see some statistics with visualize (http://localhost:8080/statistics.html)
 
 
-# Installation
+## Prod
 
-*Babel*
+```
+$ npm run build
+```
 
-https://github.com/babel/babel-loader
+This command line create a dist with your bundle
 
-npm install "babel-loader@^8.0.0-beta" @babel/core @babel/preset-env @babel/preset-react webpack
+## Add a new bundle
 
+Add on webpack.common.js an entry and copy on plugins a new HtmlWebpackPlugin with your entry on chunks.
 
-*Atom*
+example:
 
-https://atom.io/themes/seti-ui
+new HtmlWebpackPlugin({
+  template: "./src/new.html",
+  filename: "./new.html",
+  chunks: ['entry']
+})
 
-https://atom.io/themes/monokai-seti
+## Deploying to Heroku
 
-https://atom.io/packages/minimap
+```
+$ heroku create
+$ git push heroku master
+$ heroku open
+```
 
-https://atom.io/packages/highlight-selected
+## Vulnerabilities
 
-https://atom.io/packages/minimap-highlight-selected
+```
+$ npm update request --depth 3
+```
 
-https://atom.io/packages/autoclose-html
+It still 5 vulnerabilities with [node sass](https://github.com/sass/node-sass/issues/2355)
 
-https://atom.io/packages/pigments
+## Link
 
-https://atom.io/packages/linter
+- [Atom](https://www.sitepoint.com/10-essential-atom-add-ons/)
 
-https://atom.io/packages/linter-htmlhint
-
-https://atom.io/packages/linter-csslint
-
-https://atom.io/packages/linter-jshint
-
-https://www.sitepoint.com/10-essential-atom-add-ons/
-
-https://atom.io/packages/git-time-machine => alt t
-
-# React
-
-*Select*
-
-https://jedwatson.github.io/react-select/
-
-https://github.com/JedWatson/react-select
+- [Webpack](http://putaindecode.io/fr/articles/js/webpack/)

@@ -7,6 +7,7 @@ const glob = require("glob");
 module.exports = {
  entry: {
    index: './src/js/index.js',
+   search: './src/js/search.js',
    app:'./src/components/App.js',
    faq: glob.sync("./src/components/faq/*.js"),
    select: glob.sync("./src/components/select/*.js"),
@@ -41,6 +42,11 @@ module.exports = {
       template: "./src/app.html",
       filename: "./selectmulti.html",
       chunks: ['selectmulti']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'search.html',
+      template: './src/search.html',
+      chunks: ['search']
     })
  ],
  module: {
