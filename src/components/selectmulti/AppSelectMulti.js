@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom';
 import Select from 'react-select';
 import CardMessage from './CardMessage';
 import './scss/home.scss';
+import '../../media/g12.png';
+import '../../media/bg-showcase-1.jpg';
+import './js/anime.min.js';
+import './js/charming.min.js';
+import './js/main.js';
+
 const ClassNameHelper = require("../../helper/ClassNameHelper");
 const CardModel = require("./CardModel");
 
@@ -35,8 +41,8 @@ class AppSelectMulti extends Component {
     const cards = value.length == 0 ? CardModel.cards : value;
 
     return (
-      <div>
-        <section id="classeur" className="content-section text-white folder-section content--ravi">
+      <div className="card-content">
+        <section id="classeur" className="content-section text-white folder-section content--ravi ">
             <div className="container text-center">
               <div className="grid">
               <div className="grid__item">
@@ -58,7 +64,7 @@ class AppSelectMulti extends Component {
                 <div className="grid__item"><div className="dummy"><svg><use xlinkHref="#icon-folderdummy"></use></svg></div></div>
               </div>
               <div className="content-section-heading">
-              <h2 className="mb-5 text-dark">Le classeur</h2>
+              <h2 className="mb-5">Le Classeur</h2>
                 <Select
                   disabled={disabled}
                   onChange={this.handleSelectChange}
