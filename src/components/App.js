@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Faq from './faq/Faq';
 import '../scss/App.scss';
+import 'react-select/dist/react-select.css';
 
 class App extends Component {
   render() {

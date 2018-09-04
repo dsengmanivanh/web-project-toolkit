@@ -23,7 +23,7 @@ class AppSelect extends Component {
   render() {
   	const { selectedOption } = this.state;
   	const value = selectedOption && selectedOption.value;
-    const options = value === null || value == "" ? StateModel.US: [selectedOption];
+    const options = value === null || value === "" ? StateModel.US: [selectedOption];
 
     return (
       <div>
