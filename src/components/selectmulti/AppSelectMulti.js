@@ -8,7 +8,6 @@ import '../../media/bg-showcase-1.jpg';
 import './js/anime.min.js';
 import './js/charming.min.js';
 import './js/main.js';
-import 'react-select/dist/react-select.css';
 
 const ClassNameHelper = require("../../helper/ClassNameHelper");
 const CardModel = require("./CardModel");
