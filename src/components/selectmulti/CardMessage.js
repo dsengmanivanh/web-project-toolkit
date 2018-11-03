@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './scss/_card.scss';
+import './scss/card.scss';
+import { Card, CardImg, CardText, CardBody, CardTitle,Col } from 'reactstrap';
 
 class CardMessage extends Component  {
 
@@ -10,17 +11,15 @@ class CardMessage extends Component  {
     render() {
       const {title, description, link} = this.props;
       return (
-        <div className="col-lg-6 card-item">
-          <div className="card h-100">
-            <a href={link} target="_blank"><img className="card-img-top" src="http://placehold.it/700x400" alt={title}></img></a>
-            <div className="card-body">
-              <h4 className="card-title">
-                <a href={link} target="_blank">{title}</a>
-              </h4>
-              <p className="card-text">{description}</p>
-            </div>
-          </div>
-        </div>
+        <Col sm="4" className="item">
+            <Card>
+                <a href={link} target="_blank"><CardImg top width="100%" src="http://placehold.it/700x400" alt={title} /></a>
+                <CardBody>
+                    <a href={link} target="_blank"><CardTitle>{title}</CardTitle></a>
+                    <CardText>{description}</CardText>
+                </CardBody>
+            </Card>
+        </Col>
       )
     }
 }

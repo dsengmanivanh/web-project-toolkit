@@ -8,6 +8,8 @@ import '../../media/bg-showcase-1.jpg';
 import './js/anime.min.js';
 import './js/charming.min.js';
 import './js/main.js';
+import makeAnimated from 'react-select/lib/animated';
+import './scss/card.scss';
 
 const ClassNameHelper = require("../../helper/ClassNameHelper");
 const CardModel = require("./CardModel");
@@ -63,14 +65,17 @@ class AppSelectMulti extends Component {
                 <div className="grid__item"><div className="dummy"><svg><use xlinkHref="#icon-folderdummy"></use></svg></div></div>
               </div>
               <div className="content-section-heading">
-              <h2 className="mb-5 text-dark">Le classeur</h2>
+                <h2 className="mb-5 text-dark">Le classeur</h2>
+                <div className="selectitem">
                     <Select
                         value={value}
                         onChange={this.handleChange}
                         options={options}
                         isMulti
                         placeholder={"Select your favourite(s)"}
+                        components={makeAnimated()}
                     />
+                </div>
               </div>
             </div>
 
