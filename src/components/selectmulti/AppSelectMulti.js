@@ -15,28 +15,27 @@ const CardModel = require("./CardModel");
 
 class AppSelectMulti extends Component {
 
-  constructor(props) {
-    super(props);
-    this.handleSelectChange = this.handleSelectChange.bind(this);
-    this.toggleRtl = this.toggleRtl.bind(this);
-    this.state = {
-        removeSelected: true,
-        disabled: false,
-        value: [],
-        rtl: false
-    };
-  }
+    constructor(props) {
+        super(props);
+        this.handleChange = this.handleChange.bind(this);
+        this.toggleRtl = this.toggleRtl.bind(this);
+        this.state = {
+            value: '',
+            disabled: false
+        };
+    }
 
-  handleSelectChange (value) {
-		this.setState({ value: value });
-	}
+    handleChange (value) {
+		this.setState({ value });
+		 console.log(`value selected:`, value);
+    }
 
 	toggleRtl (e) {
 		let rtl = e.target.checked;
 		this.setState({ rtl });
 	}
 
-  render() {
+    render() {
   	const { disabled, value } = this.state;
     const options = CardModel.cards;
     const cards = value.length == 0 ? CardModel.cards : value;
@@ -65,17 +64,14 @@ class AppSelectMulti extends Component {
                 <div className="grid__item"><div className="dummy"><svg><use xlinkHref="#icon-folderdummy"></use></svg></div></div>
               </div>
               <div className="content-section-heading">
-              <h2 className="mb-5">Le Classeur</h2>
-                <Select
-                  disabled={disabled}
-                  onChange={this.handleSelectChange}
-                  multi
-                  options={options}
-                  placeholder="Select your favourite(s)"
-                  removeSelected={this.state.removeSelected}
-                  rtl={this.state.rtl}
-                  value={value}
-                />
+              <h2 className="mb-5 text-dark">Le classeur</h2>
+                    <Select
+                        value={value}
+                        onChange={this.handleChange}
+                        options={options}
+                        isMulti
+                        placeholder={"Select your favourite(s)"}
+                    />
               </div>
             </div>
 
