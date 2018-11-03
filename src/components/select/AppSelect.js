@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Select from 'react-select';
 import SelectMessage from './SelectMessage';
-import './Select.scss';
-const ClassNameHelper = require("../../helper/ClassNameHelper");
 const StateModel = require("./StateModel");
+import { Container } from 'reactstrap';
 
 class AppSelect extends Component {
 
@@ -26,26 +25,24 @@ class AppSelect extends Component {
     const options = value === null || value === "" ? StateModel.US: [selectedOption];
 
     return (
-      <div>
-          <div className={ClassNameHelper({"container": true})}>
-            <h1>React Select</h1>
-            <Select
-              className="Select"
-              name="form-field-name"
-              value={value}
-              onChange={this.handleChange}
-              options={StateModel.US}
-            />
-            {
-              options.map(data => {
-                  return (
-                    <SelectMessage message={data.label}></SelectMessage>
-                  )
-                }
+      <Container>
+        <h1>React Select</h1>
+        <Select
+          className="Select"
+          name="form-field-name"
+          value={value}
+          onChange={this.handleChange}
+          options={StateModel.US}
+        />
+        {
+          options.map(data => {
+              return (
+                <SelectMessage message={data.label}></SelectMessage>
               )
             }
-          </div>
-      </div>
+          )
+        }
+      </Container>
     );
   }
 }

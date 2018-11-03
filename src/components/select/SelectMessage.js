@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Card, CardText, CardBody, CardTitle, Button } from 'reactstrap';
+import './Select.scss';
 
 class SelectMessage extends Component  {
 
@@ -9,13 +11,13 @@ class SelectMessage extends Component  {
     render() {
       const {message} = this.props;
       return (
-        <div className="card Select">
-            <div className="card-body">
-                <h5 className="card-title">{message}</h5>
-                <p className="card-text">{message}</p>
-                <a href="faq.html" className="btn btn-primary">Go</a>
-            </div>
-        </div>
+          <Card className="Select">
+            <CardBody>
+              <CardTitle>{message}</CardTitle>
+              <CardText>{message}</CardText>
+              <Button color="primary">Button</Button>
+            </CardBody>
+          </Card>
       )
     }
 }
